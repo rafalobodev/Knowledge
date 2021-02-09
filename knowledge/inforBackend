@@ -1,0 +1,64 @@
++++++++++++postgres+++++++++++++++++++++++++++++++++++++++++++++
+*psql -U postgres   :terminal entrar como usuario no sql com senha '123456'
+* \l     : terminal lista os esquemas do postgres database feitos
+*CREATE DATABASE knowledge_final;    :terminal cria o banco de dados
+* \c knowledge_final;   :terminal conectar ao banco de dados criado
+* \dt     : terminal listar as tabelas dentro do banco de dados database se tem ou não
+* \q    : terminal para sair do client do postgree
+
+*select * from users;    :ver os usuarios cadastrados
+*update users set admin = true where id = 1;     : se um usuario foi cadastrado no site no terminal coloca 1 como true pois esta com false
+*select * from knex_migrations;     :no postgres em database knowledge_final; > mostra todas as migrates criadas
+*select * from categories;     :mostra todas as categorias
+*select * from categories where id in (1,2,3)    : traz apenas as categorias com id 1 2 3 
+*select * from articles where "categoryId" in (4,5,6)    : traz toos os artigos dessa categoria
+++++++++postman+++++++++++++++++++++++++++++++++++++++++++++++++++++
+http://localhost:3000/users               >  post > saida= use save    : 
+
+* post > http://localhost:3000/articles  >  body  >
+
+{
+    "name": "vue",
+    "description":"0 artigo abrindo os aepectos"
+    "userId": "1",
+    "category": "4",
+    "content": "conteudo do artigo..."
+}      : faz send envio dos dados post test de backend para artigos 204 enviado ok.. fazendo get   > authorization   :  em data vem o array q foi feito post>>>>
+com count de quantos registros e limit paginação da consulta maximo ta 10
+>http://localhost:3000/articles/1   > get    : getbyid agora retorna assim os dados
+{
+    "id": "1",
+    "name": "vue",
+    "description":"0 artigo abrindo os aepectos"
+    "userId": "1",
+    "category": "4",
+    "content": "conteudo do artigo..."
+}
+
+>put   >   http://localhost:3000/articles/1    : put para gerar uma alteração edição de dados nome ou algo do tipo
+> delete  > http://localhost:3000/articles/1     : caso queira deletar do backend este dado
++++++++++projeto++++++++++++++
+*npm i    : terminal instalando as dependencias do package.json...
+*code    : obs>abre o vs code pelo terminal na pasta q estiver 
+*npm i -g knex: acesso ao banco de dados
+*.env    :arquivo de segurança... arquivos começam com . são arquivos não visiveis em mac e linux arquivo oculto e conecta banco de dados
+*mongod    :terminal em backend startar mongodb para backend funcionar porta padrão 27017
+*knex: acesso ao banco de dados
+*knex init   : knex ja instalado de forma global no projeto.. no terminal cria knexfile.js no backend q faz união com a configuração com o banco de dados
+*knex migrate:make create_table_users     :terminal backend cria pasta migrates e cria a tabela users no caso arquivo com data e hora criada
+*knex migrate:make create_table_categories     :terminal backend cria pasta e tabela..... igual a cima
+*knex migrate:make create_table_articles
+*knex migrate:latest    :terminal pasta backend para rodar todas as migrates tabelas criadas acima conectando backend com postgres
+*knex migrate:rollback   : executa da utima criada a primeira igual latest s[o q ao contrario
+
+* .env : api de authentication para segurança da senha e gerar token mais seguro em  authSecret: 'abc',
+
+* console.log do site    : Date.now() / 1000   //gera a data em segundos deste primeiro de janeiro
+*Date.now() / 1000 + (60 * 60 * 24 * 5)    :(segundos,1 hora em minutos, 1 dia 24 horas, 5 dias a mais ) criando a data de geração token e de expiração até q data
+
+
+
+psql -U postgres     >     \c knowledge_final;        :banco de dados postgres
+mongod                     :terminal em backend startar mongodb para backend funcionar porta padrão 27017
+npm start                  :backend da aplicação
+cd .1projetosCode\codeVue\backend

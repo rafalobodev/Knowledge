@@ -1,0 +1,29 @@
++++++++++criando um vue.js++++++++++++++++++++++
+*sudo npm i -g @vue/cli    :instala vue de forma global para iniciar a aplicação
+*vue create frontend    :cria estrutura vue basica do projeto e enter para opção padrão
+*scaffold      :cria arquivo novo e digita scaffold enter gera template basico arquivo.vue
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+*npm i    :instalar dependencias frontend
+*npm run serve    : para rodar o projeto q esta em vue.js na porta padrão 8080
+*vetur     : plugin do vscode para baixar e q cria estrutura basica do componente do vue.js
+
+*bootstrap-vue   :classe do bootstrap para criar no projeto
+*highlightjs   :para quando criar os artigos
+*liquor-tree   :arvore q sera usada para colocar as categorias no site
+*vue-gravatar   :coloca imagens e links do usuario
+*vue-mq   : parte de responsividade
+*vue-router   :para fzer as rotas
+*vue-toasted   :parte de mensagens 
+*vue2-editor    : editor digitavel label com varios itens de digitação negrito e tamanho letra e outros 
+*vuex   ://Vuex é um padrão de gerenciamento de estado + biblioteca,,Ele serve como um store centralizado para todos os componentes em uma aplicação, com regras garantindo que o estado só possa ser mutado de forma previsível
+
+
+
+
+
+
+<!---->
+
+npm run serve -- --port 8081   : rodar a aplicação frontend na porta 8081
+cd .1projetosCode\codeVue\frontend
