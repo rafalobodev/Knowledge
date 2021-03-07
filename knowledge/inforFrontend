@@ -8,17 +8,21 @@
 *npm run serve    : para rodar o projeto q esta em vue.js na porta padrão 8080
 *vetur     : plugin do vscode para baixar e q cria estrutura basica do componente do vue.js
 
-*bootstrap-vue   :classe do bootstrap para criar no projeto
+*bootstrap-vue   :classe do bootstrap com vue para criar no projeto
 *highlightjs   :para quando criar os artigos
 *liquor-tree   :arvore q sera usada para colocar as categorias no site
 *vue-gravatar   :coloca imagens e links do usuario
-*vue-mq   : parte de responsividade
+*vue-mq   : parte de responsividade para encaixar melhor em dispositivos moveis
 *vue-router   :para fzer as rotas
 *vue-toasted   :parte de mensagens 
 *vue2-editor    : editor digitavel label com varios itens de digitação negrito e tamanho letra e outros 
 *vuex   ://Vuex é um padrão de gerenciamento de estado + biblioteca,,Ele serve como um store centralizado para todos os componentes em uma aplicação, com regras garantindo que o estado só possa ser mutado de forma previsível
 
 
+
+++++++++++++++++++++console.log++++++++++++++++++++++++++
+localStorage.__knowledge_user    : inspesionando digitando esse comando mostra cadastro do localStorage.__knowledge_ q é a key o usuario
+localStorage.removeItem(__knowledge_user)    : deleta o usuario se quiser e só cadastrar um novo no registrar
 
 
 
@@ -27,3 +31,7 @@
 
 npm run serve -- --port 8081   : rodar a aplicação frontend na porta 8081
 cd .1projetosCode\codeVue\frontend
+
+
+
+

@@ -5,8 +5,8 @@ import App from './App'//imports basicos importantes
 
 import './config/bootstrap' //carregar arquivo de configuração no main
 import './config/msgs'
-import './config/axios'
-import './config/mq'
+import './config/axios' //sucesso ou erro caso um ou outro
+import './config/mq' //coloca tamanhos proporçoes main.js geral
 
 import store from './config/store' //importa store com vuex
 import router from './config/router' //coloca as rotas no principal

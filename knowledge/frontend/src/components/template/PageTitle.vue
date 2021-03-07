@@ -1,4 +1,4 @@
-<template>
+<template><!--pagina de titulo e subtitulo padrão para ser usada no menu principal e os conhecimentos clicados-->
     <div class="page-title">
         <h1><i v-if="icon" :class="icon"></i> {{ main }}</h1><!--se icone tiver disponivel casa-->
         <h2>{{ sub }}</h2>

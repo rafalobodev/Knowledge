@@ -11,8 +11,8 @@ export default new Vuex.Store({//esporta o store
     },
     mutations: {//artenancia do estado do menu se esta visivel mantem se não esta mantem
         toggleMenu(state, isVisible) {//alternancia do menu
-            if(!state.user) {//se 
-                state.isMenuVisible = false
+            if(!state.user) {//se não estiver setado usuario..
+                state.isMenuVisible = false //fica falso
                 return
             }
 
@@ -22,13 +22,13 @@ export default new Vuex.Store({//esporta o store
                 state.isMenuVisible = isVisible //defini como menu visivel
             }
         },
-        setUser(state, user) {
-            state.user = user
-            if(user) {
+        setUser(state, user) {//metodo sobre usuario
+            state.user = user 
+            if(user) { //se usuario foi setado tem autorização portador do token
                 axios.defaults.headers.common['Authorization'] = `bearer ${user.token}`
-                state.isMenuVisible = true
+                state.isMenuVisible = true //usuario valido seta para true
             } else {
-                delete axios.defaults.headers.common['Authorization']
+                delete axios.defaults.headers.common['Authorization'] //se não deleta authorização e menu não fica visivel
                 state.isMenuVisible = false
             }
         }

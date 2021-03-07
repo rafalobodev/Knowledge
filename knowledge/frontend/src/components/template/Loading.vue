@@ -1,4 +1,4 @@
-<template>
+<template><!--gif de carregamento-->
     <div class="loading">
         <img src="@/assets/loading.gif" alt="Loading">
     </div>
@@ -12,9 +12,9 @@ export default {
 
 <style>
     .loading {
-        grid-area: content;
+        grid-area: content;/*ocupa no conteudo a area*/
         display: flex;
-        justify-content: center;
+        justify-content: center;/*centraliza */
         align-items: center;
     }
 </style>

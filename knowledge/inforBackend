@@ -5,6 +5,7 @@
 * \c knowledge_final;   :terminal conectar ao banco de dados criado
 * \dt     : terminal listar as tabelas dentro do banco de dados database se tem ou não
 * \q    : terminal para sair do client do postgree
+* \d categories   : exemplo para ver banco de dados de categories
 
 *select * from users;    :ver os usuarios cadastrados
 *update users set admin = true where id = 1;     : se um usuario foi cadastrado no site no terminal coloca 1 como true pois esta com false

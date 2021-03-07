@@ -2,7 +2,7 @@ module.exports = app => {
     const { existsOrError, notExistsOrError } = app.api.validation //habilita validaçoes
 
     const save = (req, res) => {//save serve incluir ou alterar uma categoria
-        const category = {
+        const category = {//coloca 3 campos q importam no body de category para filtrar e garantir mais segurança
             id: req.body.id,
             name: req.body.name,
             parentId: req.body.parentId

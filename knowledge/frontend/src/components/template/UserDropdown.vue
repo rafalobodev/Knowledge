@@ -8,16 +8,16 @@
             <i class="fa fa-angle-down"></i><!--fa fa-angle-down: é icone imagem para baixo seta-->
         </div>
         <div class="user-dropdown-content"><!--conteudo do drop de menu adm-->
-            <router-link to="/admin" v-if="user.admin"><!--links router da roter.js, i fa fa-cogs:icone engrenagem-->
+            <router-link to="/admin" v-if="user.admin"><!--links router da roter.js, i fa fa-cogs:icone engrenagem,if apenas se for admin aparece-->
                 <i class="fa fa-cogs"></i> Administração
             </router-link>
-            <a href @click.prevent="logout"><i class="fa fa-sign-out"></i> Sair</a>
+            <a href @click.prevent="logout"><i class="fa fa-sign-out"></i> Sair</a><!--prevent:prevenir a chamada padrão de um click-->
         </div>
     </div>
 </template>
 
 <script>
-import { userKey } from '@/global'
+import { userKey } from '@/global' //importa a chave 
 import { mapState } from 'vuex' //mapear usuario do story com vuex
 import Gravatar from 'vue-gravatar'//coloca imagens e links do usuario
 
@@ -26,10 +26,10 @@ export default {
     components: { Gravatar },//para usar o gravatar-vue dentro template
     computed: mapState(['user']),//chama mapState para user
     methods: {
-        logout() {
-            localStorage.removeItem(userKey)
-            this.$store.commit('setUser', null)
-            this.$router.push({ name: 'auth' })
+        logout() {//deslogar 
+            localStorage.removeItem(userKey)//remove a userkey chave
+            this.$store.commit('setUser', null)//passa nulo em usuario
+            this.$router.push({ name: 'auth' })//e faz push para tela de login
         }
     }
 }

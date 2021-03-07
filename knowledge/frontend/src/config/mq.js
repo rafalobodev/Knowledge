@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import VueMq from 'vue-mq'
+import Vue from 'vue' //padrão
+import VueMq from 'vue-mq' //importa dependencia
 
 Vue.use(VueMq, {
     breakpoints: {
@@ -9,4 +9,4 @@ Vue.use(VueMq, {
         lg: 1140,
         xl: Infinity
     }
-})
+})//breakpoints para cada tamanho celular e telas
