@@ -50,7 +50,7 @@ com count de quantos registros e limit paginação da consulta maximo ta 10
 *knex migrate:make create_table_categories     :terminal backend cria pasta e tabela..... igual a cima
 *knex migrate:make create_table_articles
 *knex migrate:latest    :terminal pasta backend para rodar todas as migrates tabelas criadas acima conectando backend com postgres
-*knex migrate:rollback   : executa da utima criada a primeira igual latest s[o q ao contrario
+*knex migrate:rollback   : executa da utima criada a primeira igual latest so q ao contrario
 
 * .env : api de authentication para segurança da senha e gerar token mais seguro em  authSecret: 'abc',
 
